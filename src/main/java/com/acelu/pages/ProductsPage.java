@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class ProductsPage extends BasePage{
 
-    // The idea for constants is taht are values that does not changes on the execution, when you apply operations like that could fail and fail for everything
+    // The idea for constants is that are values that does not changes on the execution time, when you apply operations like this one could fail and fail for everything
     // For example could this happend
     //
     // By$ByCssSelector.class
@@ -38,7 +38,7 @@ public class ProductsPage extends BasePage{
     }
  
     public ArrayList<ProductComponent> getProductsList(){
-        //This way you can try and catch errors and flow of the selecto as well
+        //This way you can try and catch errors and flow of the selector as well
         List<WebElement> productElements = waitElementsToBeClickable(By.cssSelector(PRODUCT_ITEM));
         ArrayList<ProductComponent> products = new ArrayList<>();
 
