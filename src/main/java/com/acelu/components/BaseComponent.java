@@ -1,4 +1,4 @@
-package components;
+package com.acelu.components;
 
 import com.acelu.pages.BasePage;
 import org.openqa.selenium.By;
