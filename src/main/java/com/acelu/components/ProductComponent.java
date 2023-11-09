@@ -6,22 +6,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ProductComponent extends BaseComponent{
-
+    //Same recomendation with constants
     private static final By ADD_PRODUCT_BUTTON = By.cssSelector("button[class='btn_primary btn_inventory']");
 
     private ProductsPage productsPage;
     public ProductComponent(WebDriver driver, WebElement rootElement,ProductsPage productsPage){
         super(driver,rootElement);
         this.productsPage = productsPage;
-
-
     }
 
-    public ProductComponent addProduct(){
+    // Why not to use a void function if it is an operation?
+    public void addProduct(){
         waitForNestedElement(ADD_PRODUCT_BUTTON).click();
-        return this;
     }
-
+    
     public ProductsPage getProductsPage(){
         return this.productsPage;
     }

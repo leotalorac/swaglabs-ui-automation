@@ -19,7 +19,7 @@ public class BasePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
-
+    // Awesome implementation!!
     public WebElement waitElementToBeClickable(By locator){
        return wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
     }
